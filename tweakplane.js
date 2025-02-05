@@ -141,7 +141,7 @@ class TweakpaneExtension {
     slider.on('change', (event) => {
       this.eventValues[LABEL] = event.value;
       setTimeout(() => {
-        this.runtime.startHats('tweakpane_whenSliderChanged', {
+        Scratch.vm.runtime.startHats('tweakpane_whenSliderChanged', {
           LABEL,
         });
       }, 0);
@@ -159,7 +159,7 @@ class TweakpaneExtension {
 
     button.on('click', () => {
       setTimeout(() => {
-        this.runtime.startHats('tweakpane_whenButtonPressed', {
+        Scratch.vm.runtime.startHats('tweakpane_whenButtonPressed', {
           LABEL,
         });
       }, 0);
